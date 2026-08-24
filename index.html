@@ -9,15 +9,9 @@
 
 <style>
 
-/* ========================================
-   FONT & COLOURS
-======================================== */
-
 @font-face {
     font-family: "La Oriental";
     src: url("LaOriental-Bold.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
 }
 
 :root {
@@ -28,11 +22,6 @@
     --white: #ffffff;
     --grey: #bdbdbd;
 }
-
-
-/* ========================================
-   BASIC
-======================================== */
 
 * {
     box-sizing: border-box;
@@ -51,12 +40,12 @@ body {
 }
 
 
-/* ========================================
+/* =========================
    HEADER
-======================================== */
+========================= */
 
 header {
-    min-height: 82px;
+    min-height: 76px;
     padding: 10px 5%;
 
     background: var(--dark-claret);
@@ -71,17 +60,18 @@ header {
 .brand {
     display: flex;
     align-items: center;
-    gap: 14px;
-
+    gap: 11px;
     text-decoration: none;
 }
 
 .logo img {
-    width: 58px;
-    height: 58px;
+    width: 48px;
+    height: 48px;
+
     display: block;
 
     object-fit: cover;
+
     border-radius: 50%;
 }
 
@@ -90,7 +80,7 @@ header {
 
     color: var(--amber);
 
-    font-size: 28px;
+    font-size: 25px;
 
     line-height: 1;
 }
@@ -119,9 +109,9 @@ nav a:hover {
 }
 
 
-/* ========================================
+/* =========================
    INTRO
-======================================== */
+========================= */
 
 .intro {
     padding: 65px 5% 45px;
@@ -142,9 +132,9 @@ nav a:hover {
 }
 
 
-/* ========================================
+/* =========================
    SECTION TITLES
-======================================== */
+========================= */
 
 .section {
     padding: 20px 5% 70px;
@@ -185,9 +175,9 @@ nav a:hover {
 }
 
 
-/* ========================================
-   LATEST REPORT
-======================================== */
+/* =========================
+   LATEST
+========================= */
 
 .feature {
     background: var(--deep-claret);
@@ -240,9 +230,9 @@ nav a:hover {
 }
 
 
-/* ========================================
+/* =========================
    PHOTO REPORTS
-======================================== */
+========================= */
 
 .reports {
     display: grid;
@@ -282,6 +272,7 @@ nav a:hover {
 
 .report-image img {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -330,9 +321,9 @@ nav a:hover {
 }
 
 
-/* ========================================
+/* =========================
    PHOTO GALLERIES
-======================================== */
+========================= */
 
 .gallery {
     display: none;
@@ -420,14 +411,12 @@ nav a:hover {
     object-fit: cover;
 
     display: block;
-
-    cursor: pointer;
 }
 
 
-/* ========================================
-   END OF SEASON VIDEOS
-======================================== */
+/* =========================
+   VIDEOS
+========================= */
 
 .videos {
     background: var(--dark-claret);
@@ -463,8 +452,48 @@ nav a:hover {
     border-bottom-color: var(--amber);
 }
 
-.video-placeholder {
+.video-thumbnail {
+    position: relative;
+
     height: 280px;
+
+    overflow: hidden;
+
+    background: var(--deep-claret);
+}
+
+.video-thumbnail img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.3s;
+}
+
+.video:hover .video-thumbnail img {
+    transform: scale(1.03);
+}
+
+.play-button {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: var(--amber);
+
+    color: var(--deep-claret);
 
     display: flex;
 
@@ -472,15 +501,9 @@ nav a:hover {
 
     justify-content: center;
 
-    background: #1d0007;
+    font-size: 24px;
 
-    color: var(--amber);
-
-    font-family: "La Oriental", sans-serif;
-
-    font-size: 30px;
-
-    text-transform: uppercase;
+    padding-left: 4px;
 }
 
 .video-info {
@@ -516,9 +539,9 @@ nav a:hover {
 }
 
 
-/* ========================================
+/* =========================
    ABOUT
-======================================== */
+========================= */
 
 .about {
     max-width: 850px;
@@ -537,9 +560,9 @@ nav a:hover {
 }
 
 
-/* ========================================
+/* =========================
    DONATE
-======================================== */
+========================= */
 
 .donate {
     background: var(--deep-claret);
@@ -586,9 +609,9 @@ nav a:hover {
 }
 
 
-/* ========================================
+/* =========================
    FOOTER
-======================================== */
+========================= */
 
 footer {
     padding: 25px 5%;
@@ -613,24 +636,25 @@ footer strong {
 }
 
 
-/* ========================================
+/* =========================
    MOBILE
-======================================== */
+========================= */
 
 @media (max-width: 700px) {
 
     header {
-        min-height: 72px;
+        min-height: 70px;
 
         padding: 10px 5%;
     }
 
     .logo img {
-        height: 46px;
+        width: 42px;
+        height: 42px;
     }
 
     .brand {
-        gap: 9px;
+        gap: 8px;
     }
 
     .brand-name {
@@ -695,7 +719,7 @@ footer strong {
         grid-template-columns: 1fr;
     }
 
-    .video-placeholder {
+    .video-thumbnail {
         height: 230px;
     }
 
@@ -717,9 +741,7 @@ footer strong {
 <body>
 
 
-<!-- ========================================
-     HEADER
-======================================== -->
+<!-- HEADER -->
 
 <header>
 
@@ -734,7 +756,6 @@ footer strong {
         </div>
 
     </a>
-
 
     <nav>
 
@@ -751,9 +772,7 @@ footer strong {
 </header>
 
 
-<!-- ========================================
-     INTRO
-======================================== -->
+<!-- INTRO -->
 
 <section class="intro">
 
@@ -765,9 +784,7 @@ footer strong {
 </section>
 
 
-<!-- ========================================
-     LATEST
-======================================== -->
+<!-- LATEST -->
 
 <section class="section" id="reports">
 
@@ -782,7 +799,6 @@ footer strong {
         </span>
 
     </div>
-
 
     <div class="feature">
 
@@ -807,9 +823,7 @@ footer strong {
 </section>
 
 
-<!-- ========================================
-     PHOTO REPORTS
-======================================== -->
+<!-- PHOTO REPORTS -->
 
 <section class="section">
 
@@ -824,7 +838,6 @@ footer strong {
         </span>
 
     </div>
-
 
     <div class="reports">
 
@@ -933,15 +946,12 @@ footer strong {
 
         </div>
 
-
     </div>
 
 </section>
 
 
-<!-- ========================================
-     FREIBURG GALLERY
-======================================== -->
+<!-- FREIBURG GALLERY -->
 
 <div class="gallery" id="gallery-freiburg">
 
@@ -975,9 +985,7 @@ footer strong {
 </div>
 
 
-<!-- ========================================
-     STENHOUSEMUIR GALLERY
-======================================== -->
+<!-- STENHOUSEMUIR GALLERY -->
 
 <div class="gallery" id="gallery-stenhousemuir">
 
@@ -1011,9 +1019,7 @@ footer strong {
 </div>
 
 
-<!-- ========================================
-     HELSINKI GALLERY
-======================================== -->
+<!-- HELSINKI GALLERY -->
 
 <div class="gallery" id="gallery-helsinki">
 
@@ -1047,9 +1053,7 @@ footer strong {
 </div>
 
 
-<!-- ========================================
-     END OF SEASON VIDEOS
-======================================== -->
+<!-- END OF SEASON VIDEOS -->
 
 <section class="videos">
 
@@ -1065,7 +1069,6 @@ footer strong {
 
     </div>
 
-
     <div class="video-grid">
 
 
@@ -1078,8 +1081,17 @@ footer strong {
             class="video"
         >
 
-            <div class="video-placeholder">
-                WATCH
+            <div class="video-thumbnail">
+
+                <img
+                    src="https://img.youtube.com/vi/Pt2zS-AAYPE/maxresdefault.jpg"
+                    alt="BLOCK E 2025 / 26"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
             </div>
 
             <div class="video-info">
@@ -1110,8 +1122,17 @@ footer strong {
             class="video"
         >
 
-            <div class="video-placeholder">
-                WATCH
+            <div class="video-thumbnail">
+
+                <img
+                    src="https://img.youtube.com/vi/qpVw_Tr1TI4/maxresdefault.jpg"
+                    alt="BLOCK E 2024 / 25"
+                >
+
+                <div class="play-button">
+                    ▶
+                </div>
+
             </div>
 
             <div class="video-info">
@@ -1132,15 +1153,12 @@ footer strong {
 
         </a>
 
-
     </div>
 
 </section>
 
 
-<!-- ========================================
-     ABOUT
-======================================== -->
+<!-- ABOUT -->
 
 <section class="about">
 
@@ -1164,9 +1182,7 @@ footer strong {
 </section>
 
 
-<!-- ========================================
-     DONATE
-======================================== -->
+<!-- DONATE -->
 
 <section class="donate" id="donate">
 
@@ -1190,9 +1206,7 @@ footer strong {
 </section>
 
 
-<!-- ========================================
-     FOOTER
-======================================== -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1207,9 +1221,7 @@ footer strong {
 </footer>
 
 
-<!-- ========================================
-     GALLERY JAVASCRIPT
-======================================== -->
+<!-- JAVASCRIPT -->
 
 <script>
 
@@ -1217,7 +1229,8 @@ function openGallery(game) {
 
     closeGalleries();
 
-    const gallery = document.getElementById("gallery-" + game);
+    const gallery =
+        document.getElementById("gallery-" + game);
 
     if (gallery) {
 
@@ -1232,7 +1245,8 @@ function openGallery(game) {
 
 function closeGalleries() {
 
-    const galleries = document.querySelectorAll(".gallery");
+    const galleries =
+        document.querySelectorAll(".gallery");
 
     galleries.forEach(function(gallery) {
 
@@ -1244,8 +1258,6 @@ function closeGalleries() {
 
 }
 
-
-/* CLOSE WITH ESCAPE */
 
 document.addEventListener("keydown", function(event) {
 
