@@ -6,7 +6,20 @@
 
 <title>Block E 19</title>
 
+<!-- Temporary graffiti-style font.
+     We can replace this with the real La Oriental font later. -->
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
 <style>
+
+:root {
+    --claret: #6b0018;
+    --dark-claret: #4d0012;
+    --deep-claret: #35000c;
+    --amber: #f2a900;
+    --white: #ffffff;
+    --light-white: #eeeeee;
+}
 
 * {
     box-sizing: border-box;
@@ -14,31 +27,47 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: #0b0b0b;
-    color: white;
+    background: var(--claret);
+    color: var(--white);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     padding: 22px 5%;
-    border-bottom: 1px solid #222;
+    background: var(--deep-claret);
+    border-bottom: 2px solid var(--amber);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* BLOCK E 19 */
+
 .logo {
-    font-size: 25px;
-    font-weight: 900;
-    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: #b52b35;
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
 }
+}
+
+
+/* NAVIGATION */
 
 nav {
     display: flex;
@@ -46,28 +75,33 @@ nav {
 }
 
 nav a {
-    color: #aaa;
+    color: var(--white);
     text-decoration: none;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
+    transition: 0.2s;
 }
 
 nav a:hover {
-    color: white;
+    color: var(--amber);
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    min-height: 70vh;
+    min-height: 75vh;
     padding: 8% 5%;
+
     display: flex;
     align-items: flex-end;
 
     background:
-        linear-gradient(to top, #0b0b0b, transparent 65%),
-        linear-gradient(135deg, #292929, #111);
+        linear-gradient(to top, var(--claret), transparent 70%),
+        linear-gradient(135deg, #850020, #4d0012);
 }
 
 .hero-text {
@@ -75,64 +109,86 @@ nav a:hover {
 }
 
 .kicker {
-    color: #b52b35;
+    color: var(--amber);
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .hero h1 {
+    color: var(--amber);
+
+    font-family: 'Permanent Marker', cursive;
+
     font-size: clamp(65px, 12vw, 150px);
-    line-height: 0.8;
-    letter-spacing: -7px;
-    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .hero p {
     margin-top: 30px;
-    color: #aaa;
+    color: var(--white);
     max-width: 500px;
     line-height: 1.6;
+    font-size: 16px;
 }
 
-/* BUTTON */
+
+/* =========================
+   BUTTON
+========================= */
 
 .button {
     display: inline-block;
+
     margin-top: 25px;
-    padding: 14px 20px;
-    background: #b52b35;
-    color: white;
+    padding: 15px 22px;
+
+    background: var(--amber);
+    color: var(--deep-claret);
+
     text-decoration: none;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
+
+    transition: 0.2s;
 }
 
 .button:hover {
-    background: #d13a45;
+    background: var(--white);
+    color: var(--deep-claret);
 }
 
-/* SECTIONS */
+
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 70px 5%;
 }
 
 .heading {
-    border-bottom: 1px solid #292929;
+    border-bottom: 2px solid var(--amber);
     padding-bottom: 15px;
     margin-bottom: 30px;
 }
 
 .heading h2 {
+    color: var(--amber);
     font-size: 32px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* REPORTS */
+
+/* =========================
+   REPORTS
+========================= */
 
 .reports {
     display: grid;
@@ -142,12 +198,25 @@ section {
 
 .report {
     min-height: 320px;
-    background: #181818;
+
+    background: var(--dark-claret);
+
     position: relative;
     overflow: hidden;
+
     display: flex;
     align-items: flex-end;
+
     padding: 22px;
+
+    border: 1px solid rgba(242, 169, 0, 0.25);
+
+    transition: 0.25s;
+}
+
+.report:hover {
+    transform: translateY(-5px);
+    border-color: var(--amber);
 }
 
 .report-bg {
@@ -155,8 +224,8 @@ section {
     inset: 0;
 
     background:
-        linear-gradient(to top, #090909, transparent 70%),
-        linear-gradient(135deg, #333, #151515);
+        linear-gradient(to top, #250008, transparent 70%),
+        linear-gradient(135deg, #850020, #4d0012);
 }
 
 .report-content {
@@ -165,63 +234,100 @@ section {
 }
 
 .report-content small {
-    color: #b52b35;
+    color: var(--amber);
+
     font-size: 11px;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .report-content h3 {
+    color: var(--white);
+
     font-size: 23px;
     margin-top: 7px;
 }
 
 .report-content p {
-    color: #888;
+    color: var(--light-white);
+
     font-size: 12px;
     margin-top: 6px;
 }
 
-/* ABOUT */
+
+/* =========================
+   ABOUT
+========================= */
 
 .about {
     max-width: 700px;
 }
 
 .about p {
-    color: #999;
+    color: var(--white);
     line-height: 1.7;
 }
 
-/* DONATE */
+
+/* =========================
+   DONATE
+========================= */
 
 .donate {
-    background: #111;
+    background: var(--deep-claret);
+
+    border-top: 1px solid var(--amber);
+    border-bottom: 1px solid var(--amber);
 }
 
 .donate p {
-    color: #999;
+    color: var(--white);
+
     max-width: 600px;
     line-height: 1.7;
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     padding: 30px 5%;
-    border-top: 1px solid #222;
-    color: #666;
+
+    background: var(--deep-claret);
+
+    border-top: 2px solid var(--amber);
+
+    color: var(--white);
+
     font-size: 11px;
+
     display: flex;
     justify-content: space-between;
 }
 
-/* PHONE */
+footer div:first-child {
+    color: var(--amber);
+    font-weight: bold;
+}
+
+
+/* =========================
+   PHONE
+========================= */
 
 @media (max-width: 700px) {
 
     header {
         align-items: flex-start;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
     }
 
     nav {
@@ -236,11 +342,16 @@ footer {
 
     .hero {
         min-height: 65vh;
+        padding-bottom: 60px;
     }
 
     .hero h1 {
         font-size: 70px;
-        letter-spacing: -4px;
+        letter-spacing: 1px;
+    }
+
+    .hero p {
+        font-size: 15px;
     }
 
     .reports {
@@ -249,6 +360,10 @@ footer {
 
     .report {
         min-height: 270px;
+    }
+
+    .heading h2 {
+        font-size: 27px;
     }
 
     footer {
@@ -267,10 +382,15 @@ footer {
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
     <div class="logo">
-        BLOCK E<span>19</span>
+        BLOCK E 19
     </div>
 
     <nav>
@@ -282,7 +402,9 @@ footer {
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <div class="hero">
 
@@ -310,7 +432,9 @@ footer {
 </div>
 
 
-<!-- REPORTS -->
+<!-- =========================
+     REPORTS
+========================= -->
 
 <section id="reports">
 
@@ -320,44 +444,78 @@ footer {
 
     <div class="reports">
 
+
         <div class="report">
+
             <div class="report-bg"></div>
 
             <div class="report-content">
+
                 <small>Latest Report</small>
-                <h3>Motherwell vs Hearts</h3>
-                <p>Fir Park · 9 August 2026</p>
+
+                <h3>
+                    Motherwell vs Hearts
+                </h3>
+
+                <p>
+                    Fir Park · 9 August 2026
+                </p>
+
             </div>
+
         </div>
 
 
         <div class="report">
+
             <div class="report-bg"></div>
 
             <div class="report-content">
+
                 <small>Photo Report</small>
-                <h3>Motherwell vs Celtic</h3>
-                <p>Fir Park · 2 August 2026</p>
+
+                <h3>
+                    Motherwell vs Celtic
+                </h3>
+
+                <p>
+                    Fir Park · 2 August 2026
+                </p>
+
             </div>
+
         </div>
 
 
         <div class="report">
+
             <div class="report-bg"></div>
 
             <div class="report-content">
+
                 <small>Photo Report</small>
-                <h3>Motherwell vs Hibernian</h3>
-                <p>Fir Park · 26 July 2026</p>
+
+                <h3>
+                    Motherwell vs Hibernian
+                </h3>
+
+                <p>
+                    Fir Park · 26 July 2026
+                </p>
+
             </div>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- DONATE -->
+<!-- =========================
+     DONATE
+========================= -->
 
 <section class="donate" id="donate">
 
@@ -377,7 +535,9 @@ footer {
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
@@ -400,6 +560,10 @@ footer {
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     <div>
@@ -411,6 +575,7 @@ footer {
     </div>
 
 </footer>
+
 
 </body>
 </html>
