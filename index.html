@@ -9,19 +9,29 @@
 
 <style>
 
+/* ========================================
+   FONT & COLOURS
+======================================== */
+
 @font-face {
     font-family: "La Oriental";
     src: url("LaOriental-Bold.otf") format("opentype");
 }
 
 :root {
-    --claret: #4b0013;
-    --dark-claret: #39000e;
-    --deep-claret: #2b0009;
+    --claret: #2b0009;
+    --dark-claret: #250007;
+    --deep-claret: #1f0006;
+
     --amber: #d49a00;
     --white: #ffffff;
     --grey: #bdbdbd;
 }
+
+
+/* ========================================
+   BASIC
+======================================== */
 
 * {
     box-sizing: border-box;
@@ -40,9 +50,9 @@ body {
 }
 
 
-/* =========================
+/* ========================================
    HEADER
-========================= */
+======================================== */
 
 header {
     min-height: 76px;
@@ -50,7 +60,7 @@ header {
 
     background: var(--dark-claret);
 
-    border-bottom: 1px solid rgba(255,255,255,0.18);
+    border-bottom: 1px solid rgba(255,255,255,0.16);
 
     display: flex;
     align-items: center;
@@ -69,7 +79,6 @@ header {
     height: 48px;
 
     display: block;
-
     object-fit: cover;
 
     border-radius: 50%;
@@ -81,7 +90,6 @@ header {
     color: var(--amber);
 
     font-size: 25px;
-
     line-height: 1;
 }
 
@@ -96,7 +104,6 @@ nav a {
     text-decoration: none;
 
     font-size: 11px;
-
     font-weight: bold;
 
     text-transform: uppercase;
@@ -109,13 +116,12 @@ nav a:hover {
 }
 
 
-/* =========================
+/* ========================================
    INTRO
-========================= */
+======================================== */
 
 .intro {
     padding: 65px 5% 45px;
-
     max-width: 1000px;
 }
 
@@ -125,16 +131,15 @@ nav a:hover {
     max-width: 650px;
 
     font-size: 16px;
-
     line-height: 1.7;
 
     text-transform: uppercase;
 }
 
 
-/* =========================
-   SECTION TITLES
-========================= */
+/* ========================================
+   SECTION
+======================================== */
 
 .section {
     padding: 20px 5% 70px;
@@ -142,15 +147,12 @@ nav a:hover {
 
 .section-header {
     display: flex;
-
     align-items: baseline;
-
     justify-content: space-between;
 
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
 
     padding-bottom: 12px;
-
     margin-bottom: 25px;
 }
 
@@ -160,7 +162,6 @@ nav a:hover {
     color: var(--amber);
 
     font-size: 32px;
-
     font-weight: normal;
 
     text-transform: uppercase;
@@ -175,9 +176,9 @@ nav a:hover {
 }
 
 
-/* =========================
+/* ========================================
    LATEST
-========================= */
+======================================== */
 
 .feature {
     background: var(--deep-claret);
@@ -189,17 +190,15 @@ nav a:hover {
     background:
         linear-gradient(
             to top,
-            rgba(43,0,9,0.9),
-            rgba(43,0,9,0.05) 65%
+            rgba(31,0,6,0.95),
+            rgba(31,0,6,0.05) 65%
         ),
         url("photos/freiburg/1.jpg");
 
     background-size: cover;
-
     background-position: center;
 
     display: flex;
-
     align-items: flex-end;
 
     padding: 30px;
@@ -230,9 +229,9 @@ nav a:hover {
 }
 
 
-/* =========================
+/* ========================================
    PHOTO REPORTS
-========================= */
+======================================== */
 
 .reports {
     display: grid;
@@ -272,7 +271,6 @@ nav a:hover {
 
 .report-image img {
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -294,7 +292,6 @@ nav a:hover {
     color: var(--amber);
 
     font-size: 10px;
-
     font-weight: bold;
 
     text-transform: uppercase;
@@ -304,7 +301,6 @@ nav a:hover {
     margin-top: 7px;
 
     font-size: 20px;
-
     font-weight: bold;
 
     text-transform: uppercase;
@@ -321,9 +317,9 @@ nav a:hover {
 }
 
 
-/* =========================
+/* ========================================
    PHOTO GALLERIES
-========================= */
+======================================== */
 
 .gallery {
     display: none;
@@ -334,7 +330,7 @@ nav a:hover {
 
     z-index: 1000;
 
-    background: rgba(43,0,9,0.98);
+    background: rgba(31,0,6,0.98);
 
     overflow-y: auto;
 
@@ -349,13 +345,11 @@ nav a:hover {
     display: flex;
 
     justify-content: space-between;
-
     align-items: center;
 
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
 
     padding-bottom: 15px;
-
     margin-bottom: 25px;
 }
 
@@ -414,9 +408,9 @@ nav a:hover {
 }
 
 
-/* =========================
-   VIDEOS
-========================= */
+/* ========================================
+   END OF SEASON VIDEOS
+======================================== */
 
 .videos {
     background: var(--dark-claret);
@@ -452,6 +446,11 @@ nav a:hover {
     border-bottom-color: var(--amber);
 }
 
+
+/* ========================================
+   YOUTUBE THUMBNAILS
+======================================== */
+
 .video-thumbnail {
     position: relative;
 
@@ -464,7 +463,6 @@ nav a:hover {
 
 .video-thumbnail img {
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -478,6 +476,9 @@ nav a:hover {
     transform: scale(1.03);
 }
 
+
+/* AMBER CIRCLE + CLARET ARROW */
+
 .play-button {
     position: absolute;
 
@@ -486,8 +487,8 @@ nav a:hover {
 
     transform: translate(-50%, -50%);
 
-    width: 65px;
-    height: 65px;
+    width: 62px;
+    height: 62px;
 
     border-radius: 50%;
 
@@ -498,12 +499,17 @@ nav a:hover {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
 
-    padding-left: 4px;
+    font-size: 30px;
+
+    font-weight: normal;
+
+    line-height: 1;
+
+    padding-left: 3px;
 }
 
 .video-info {
@@ -514,7 +520,6 @@ nav a:hover {
     color: var(--amber);
 
     font-size: 10px;
-
     font-weight: bold;
 
     text-transform: uppercase;
@@ -539,9 +544,9 @@ nav a:hover {
 }
 
 
-/* =========================
+/* ========================================
    ABOUT
-========================= */
+======================================== */
 
 .about {
     max-width: 850px;
@@ -560,9 +565,9 @@ nav a:hover {
 }
 
 
-/* =========================
+/* ========================================
    DONATE
-========================= */
+======================================== */
 
 .donate {
     background: var(--deep-claret);
@@ -609,9 +614,9 @@ nav a:hover {
 }
 
 
-/* =========================
+/* ========================================
    FOOTER
-========================= */
+======================================== */
 
 footer {
     padding: 25px 5%;
@@ -636,9 +641,9 @@ footer strong {
 }
 
 
-/* =========================
+/* ========================================
    MOBILE
-========================= */
+======================================== */
 
 @media (max-width: 700px) {
 
@@ -723,6 +728,13 @@ footer strong {
         height: 230px;
     }
 
+    .play-button {
+        width: 55px;
+        height: 55px;
+
+        font-size: 26px;
+    }
+
     footer {
         display: block;
     }
@@ -741,14 +753,21 @@ footer strong {
 <body>
 
 
-<!-- HEADER -->
+<!-- ========================================
+     HEADER
+======================================== -->
 
 <header>
 
     <a href="#" class="brand">
 
         <div class="logo">
-            <img src="image.png" alt="BLOCK E 19">
+
+            <img
+                src="image.png"
+                alt="BLOCK E 19"
+            >
+
         </div>
 
         <div class="brand-name">
@@ -756,6 +775,7 @@ footer strong {
         </div>
 
     </a>
+
 
     <nav>
 
@@ -772,7 +792,9 @@ footer strong {
 </header>
 
 
-<!-- INTRO -->
+<!-- ========================================
+     INTRO
+======================================== -->
 
 <section class="intro">
 
@@ -784,7 +806,9 @@ footer strong {
 </section>
 
 
-<!-- LATEST -->
+<!-- ========================================
+     LATEST
+======================================== -->
 
 <section class="section" id="reports">
 
@@ -799,6 +823,7 @@ footer strong {
         </span>
 
     </div>
+
 
     <div class="feature">
 
@@ -823,7 +848,9 @@ footer strong {
 </section>
 
 
-<!-- PHOTO REPORTS -->
+<!-- ========================================
+     PHOTO REPORTS
+======================================== -->
 
 <section class="section">
 
@@ -838,6 +865,7 @@ footer strong {
         </span>
 
     </div>
+
 
     <div class="reports">
 
@@ -946,14 +974,20 @@ footer strong {
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- FREIBURG GALLERY -->
+<!-- ========================================
+     FREIBURG GALLERY
+======================================== -->
 
-<div class="gallery" id="gallery-freiburg">
+<div
+    class="gallery"
+    id="gallery-freiburg"
+>
 
     <div class="gallery-top">
 
@@ -976,18 +1010,34 @@ footer strong {
 
     <div class="gallery-grid">
 
-        <img src="photos/freiburg/1.jpg" alt="">
-        <img src="photos/freiburg/2.jpg" alt="">
-        <img src="photos/freiburg/3.jpg" alt="">
+        <img
+            src="photos/freiburg/1.jpg"
+            alt=""
+        >
+
+        <img
+            src="photos/freiburg/2.jpg"
+            alt=""
+        >
+
+        <img
+            src="photos/freiburg/3.jpg"
+            alt=""
+        >
 
     </div>
 
 </div>
 
 
-<!-- STENHOUSEMUIR GALLERY -->
+<!-- ========================================
+     STENHOUSEMUIR GALLERY
+======================================== -->
 
-<div class="gallery" id="gallery-stenhousemuir">
+<div
+    class="gallery"
+    id="gallery-stenhousemuir"
+>
 
     <div class="gallery-top">
 
@@ -1010,18 +1060,34 @@ footer strong {
 
     <div class="gallery-grid">
 
-        <img src="photos/stenhousemuir/1.jpg" alt="">
-        <img src="photos/stenhousemuir/2.jpg" alt="">
-        <img src="photos/stenhousemuir/3.jpg" alt="">
+        <img
+            src="photos/stenhousemuir/1.jpg"
+            alt=""
+        >
+
+        <img
+            src="photos/stenhousemuir/2.jpg"
+            alt=""
+        >
+
+        <img
+            src="photos/stenhousemuir/3.jpg"
+            alt=""
+        >
 
     </div>
 
 </div>
 
 
-<!-- HELSINKI GALLERY -->
+<!-- ========================================
+     HELSINKI GALLERY
+======================================== -->
 
-<div class="gallery" id="gallery-helsinki">
+<div
+    class="gallery"
+    id="gallery-helsinki"
+>
 
     <div class="gallery-top">
 
@@ -1044,16 +1110,29 @@ footer strong {
 
     <div class="gallery-grid">
 
-        <img src="photos/helsinki/1.jpg" alt="">
-        <img src="photos/helsinki/2.jpg" alt="">
-        <img src="photos/helsinki/3.jpg" alt="">
+        <img
+            src="photos/helsinki/1.jpg"
+            alt=""
+        >
+
+        <img
+            src="photos/helsinki/2.jpg"
+            alt=""
+        >
+
+        <img
+            src="photos/helsinki/3.jpg"
+            alt=""
+        >
 
     </div>
 
 </div>
 
 
-<!-- END OF SEASON VIDEOS -->
+<!-- ========================================
+     END OF SEASON VIDEOS
+======================================== -->
 
 <section class="videos">
 
@@ -1068,6 +1147,7 @@ footer strong {
         </span>
 
     </div>
+
 
     <div class="video-grid">
 
@@ -1089,7 +1169,7 @@ footer strong {
                 >
 
                 <div class="play-button">
-                    ▶
+                    →
                 </div>
 
             </div>
@@ -1130,7 +1210,7 @@ footer strong {
                 >
 
                 <div class="play-button">
-                    ▶
+                    →
                 </div>
 
             </div>
@@ -1153,12 +1233,15 @@ footer strong {
 
         </a>
 
+
     </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ========================================
+     ABOUT
+======================================== -->
 
 <section class="about">
 
@@ -1182,9 +1265,14 @@ footer strong {
 </section>
 
 
-<!-- DONATE -->
+<!-- ========================================
+     DONATE
+======================================== -->
 
-<section class="donate" id="donate">
+<section
+    class="donate"
+    id="donate"
+>
 
     <div class="section-header">
 
@@ -1199,14 +1287,19 @@ footer strong {
         FLAGS, MATERIALS AND PROJECTS.
     </p>
 
-    <a href="#" class="donate-button">
+    <a
+        href="#"
+        class="donate-button"
+    >
         DONATE
     </a>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ========================================
+     FOOTER
+======================================== -->
 
 <footer>
 
@@ -1221,7 +1314,9 @@ footer strong {
 </footer>
 
 
-<!-- JAVASCRIPT -->
+<!-- ========================================
+     GALLERY JAVASCRIPT
+======================================== -->
 
 <script>
 
@@ -1259,15 +1354,18 @@ function closeGalleries() {
 }
 
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener(
+    "keydown",
+    function(event) {
 
-    if (event.key === "Escape") {
+        if (event.key === "Escape") {
 
-        closeGalleries();
+            closeGalleries();
+
+        }
 
     }
-
-});
+);
 
 </script>
 
