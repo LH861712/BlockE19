@@ -18,7 +18,6 @@
     --claret: #2b0009;
     --dark-claret: #250007;
     --deep-claret: #1f0006;
-
     --amber: #d49a00;
     --white: #ffffff;
     --grey: #bdbdbd;
@@ -48,9 +47,7 @@ body {
 header {
     min-height: 76px;
     padding: 10px 5%;
-
     background: var(--dark-claret);
-
     border-bottom: 1px solid rgba(255,255,255,0.16);
 
     display: flex;
@@ -68,18 +65,14 @@ header {
 .logo img {
     width: 48px;
     height: 48px;
-
     display: block;
     object-fit: cover;
-
     border-radius: 50%;
 }
 
 .brand-name {
     font-family: "La Oriental", sans-serif;
-
     color: var(--amber);
-
     font-size: 25px;
     line-height: 1;
 }
@@ -91,14 +84,10 @@ nav {
 
 nav a {
     color: var(--white);
-
     text-decoration: none;
-
     font-size: 11px;
     font-weight: bold;
-
     text-transform: uppercase;
-
     transition: 0.2s;
 }
 
@@ -118,18 +107,15 @@ nav a:hover {
 
 .intro p {
     color: var(--white);
-
     max-width: 650px;
-
     font-size: 16px;
     line-height: 1.7;
-
     text-transform: uppercase;
 }
 
 
 /* ========================================
-   SECTION
+   SECTIONS
 ======================================== */
 
 .section {
@@ -149,20 +135,15 @@ nav a:hover {
 
 .section-header h2 {
     font-family: "La Oriental", sans-serif;
-
     color: var(--amber);
-
     font-size: 32px;
     font-weight: normal;
-
     text-transform: uppercase;
 }
 
 .section-header span {
     color: var(--grey);
-
     font-size: 10px;
-
     text-transform: uppercase;
 }
 
@@ -197,25 +178,19 @@ nav a:hover {
 
 .feature-info h3 {
     font-family: "La Oriental", sans-serif;
-
     color: var(--white);
 
     font-size: clamp(35px, 5vw, 65px);
 
     font-weight: normal;
-
     line-height: 1;
-
     text-transform: uppercase;
 }
 
 .feature-info p {
     margin-top: 10px;
-
     color: var(--grey);
-
     font-size: 12px;
-
     text-transform: uppercase;
 }
 
@@ -226,25 +201,17 @@ nav a:hover {
 
 .reports {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 18px;
 }
 
 .report {
     display: block;
-
     background: var(--dark-claret);
-
     color: var(--white);
-
     text-decoration: none;
-
     border-bottom: 2px solid transparent;
-
     cursor: pointer;
-
     transition: 0.2s;
 }
 
@@ -254,20 +221,15 @@ nav a:hover {
 
 .report-image {
     height: 300px;
-
     background: var(--deep-claret);
-
     overflow: hidden;
 }
 
 .report-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
     transition: 0.3s;
 }
 
@@ -281,29 +243,22 @@ nav a:hover {
 
 .report-info small {
     color: var(--amber);
-
     font-size: 10px;
     font-weight: bold;
-
     text-transform: uppercase;
 }
 
 .report-info h3 {
     margin-top: 7px;
-
     font-size: 20px;
     font-weight: bold;
-
     text-transform: uppercase;
 }
 
 .report-info p {
     margin-top: 5px;
-
     color: var(--grey);
-
     font-size: 11px;
-
     text-transform: uppercase;
 }
 
@@ -316,9 +271,7 @@ nav a:hover {
     display: none;
 
     position: fixed;
-
     inset: 0;
-
     z-index: 1000;
 
     background: rgba(31,0,6,0.98);
@@ -334,7 +287,6 @@ nav a:hover {
 
 .gallery-top {
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 
@@ -346,7 +298,6 @@ nav a:hover {
 
 .gallery-title {
     font-family: "La Oriental", sans-serif;
-
     color: var(--amber);
 
     font-size: clamp(28px, 5vw, 55px);
@@ -356,13 +307,10 @@ nav a:hover {
 
 .close-gallery {
     border: none;
-
     background: transparent;
-
     color: var(--white);
 
     font-size: 30px;
-
     cursor: pointer;
 }
 
@@ -372,29 +320,21 @@ nav a:hover {
 
 .gallery-subtitle {
     color: var(--grey);
-
     font-size: 11px;
-
     text-transform: uppercase;
-
     margin-bottom: 25px;
 }
 
 .gallery-grid {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 12px;
 }
 
 .gallery-grid img {
     width: 100%;
-
     height: 320px;
-
     object-fit: cover;
-
     display: block;
 }
 
@@ -409,23 +349,18 @@ nav a:hover {
     padding: 65px 5%;
 
     border-top: 1px solid rgba(255,255,255,0.12);
-
     border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
 .video-grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 20px;
 }
 
 .video {
     background: var(--deep-claret);
-
     color: var(--white);
-
     text-decoration: none;
 
     border-bottom: 2px solid transparent;
@@ -468,40 +403,9 @@ nav a:hover {
 }
 
 
-/* AMBER CIRCLE + CLARET ARROW */
-
-.play-button {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 62px;
-    height: 62px;
-
-    border-radius: 50%;
-
-    background: var(--amber);
-
-    color: var(--deep-claret);
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 30px;
-
-    font-weight: normal;
-
-    line-height: 1;
-
-    padding-left: 3px;
-}
+/* ========================================
+   VIDEO INFORMATION
+======================================== */
 
 .video-info {
     padding: 18px;
@@ -536,12 +440,11 @@ nav a:hover {
 
 
 /* ========================================
-   ABOUT
+   ABOUT BLOCK E
 ======================================== */
 
 .about {
     max-width: 900px;
-
     padding: 65px 5%;
 }
 
@@ -640,7 +543,6 @@ footer strong {
 
     header {
         min-height: 70px;
-
         padding: 10px 5%;
     }
 
@@ -675,7 +577,6 @@ footer strong {
 
     .feature-photo {
         min-height: 360px;
-
         padding: 20px;
     }
 
@@ -717,13 +618,6 @@ footer strong {
 
     .video-thumbnail {
         height: 230px;
-    }
-
-    .play-button {
-        width: 55px;
-        height: 55px;
-
-        font-size: 26px;
     }
 
     footer {
@@ -965,7 +859,6 @@ footer strong {
 
         </div>
 
-
     </div>
 
 </section>
@@ -1001,20 +894,9 @@ footer strong {
 
     <div class="gallery-grid">
 
-        <img
-            src="photos/freiburg/1.jpg"
-            alt=""
-        >
-
-        <img
-            src="photos/freiburg/2.jpg"
-            alt=""
-        >
-
-        <img
-            src="photos/freiburg/3.jpg"
-            alt=""
-        >
+        <img src="photos/freiburg/1.jpg" alt="">
+        <img src="photos/freiburg/2.jpg" alt="">
+        <img src="photos/freiburg/3.jpg" alt="">
 
     </div>
 
@@ -1051,20 +933,9 @@ footer strong {
 
     <div class="gallery-grid">
 
-        <img
-            src="photos/stenhousemuir/1.jpg"
-            alt=""
-        >
-
-        <img
-            src="photos/stenhousemuir/2.jpg"
-            alt=""
-        >
-
-        <img
-            src="photos/stenhousemuir/3.jpg"
-            alt=""
-        >
+        <img src="photos/stenhousemuir/1.jpg" alt="">
+        <img src="photos/stenhousemuir/2.jpg" alt="">
+        <img src="photos/stenhousemuir/3.jpg" alt="">
 
     </div>
 
@@ -1101,20 +972,9 @@ footer strong {
 
     <div class="gallery-grid">
 
-        <img
-            src="photos/helsinki/1.jpg"
-            alt=""
-        >
-
-        <img
-            src="photos/helsinki/2.jpg"
-            alt=""
-        >
-
-        <img
-            src="photos/helsinki/3.jpg"
-            alt=""
-        >
+        <img src="photos/helsinki/1.jpg" alt="">
+        <img src="photos/helsinki/2.jpg" alt="">
+        <img src="photos/helsinki/3.jpg" alt="">
 
     </div>
 
@@ -1159,10 +1019,6 @@ footer strong {
                     alt="BLOCK E 2025 / 26"
                 >
 
-                <div class="play-button">
-                    →
-                </div>
-
             </div>
 
             <div class="video-info">
@@ -1200,10 +1056,6 @@ footer strong {
                     alt="BLOCK E 2024 / 25"
                 >
 
-                <div class="play-button">
-                    →
-                </div>
-
             </div>
 
             <div class="video-info">
@@ -1223,7 +1075,6 @@ footer strong {
             </div>
 
         </a>
-
 
     </div>
 
