@@ -6,19 +6,14 @@
 
 <title>Block E 19</title>
 
-<!-- Temporary graffiti-style font.
-     We can replace this with the real La Oriental font later. -->
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-
 <style>
 
 :root {
-    --claret: #6b0018;
-    --dark-claret: #4d0012;
-    --deep-claret: #35000c;
-    --amber: #f2a900;
+    --claret: #4a0012;
+    --dark-claret: #3a000e;
+    --amber: #d99a00;
     --white: #ffffff;
-    --light-white: #eeeeee;
+    --grey: #d0d0d0;
 }
 
 * {
@@ -43,16 +38,17 @@ body {
 ========================= */
 
 header {
-    padding: 22px 5%;
-    background: var(--deep-claret);
-    border-bottom: 2px solid var(--amber);
+    padding: 18px 5%;
+    background: var(--claret);
+    border-bottom: 1px solid rgba(217, 154, 0, 0.5);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* BLOCK E 19 */
+
+/* BLOCK E LOGO */
 
 .logo {
     display: flex;
@@ -60,7 +56,7 @@ header {
 }
 
 .logo img {
-    height: 55px;
+    height: 58px;
     width: auto;
     display: block;
 }
@@ -92,47 +88,24 @@ nav a:hover {
 ========================= */
 
 .hero {
-    min-height: 75vh;
+    min-height: 35vh;
     padding: 8% 5%;
 
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 
-    background:
-        linear-gradient(to top, var(--claret), transparent 70%),
-        linear-gradient(135deg, #850020, #4d0012);
+    background: var(--claret);
 }
 
 .hero-text {
-    max-width: 750px;
-}
-
-.kicker {
-    color: var(--amber);
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-}
-
-.hero h1 {
-    color: var(--amber);
-
-    font-family: 'Permanent Marker', cursive;
-
-    font-size: clamp(65px, 12vw, 150px);
-    line-height: 0.85;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    max-width: 650px;
 }
 
 .hero p {
-    margin-top: 30px;
     color: var(--white);
-    max-width: 500px;
-    line-height: 1.6;
-    font-size: 16px;
+    max-width: 550px;
+    line-height: 1.7;
+    font-size: 18px;
 }
 
 
@@ -144,10 +117,10 @@ nav a:hover {
     display: inline-block;
 
     margin-top: 25px;
-    padding: 15px 22px;
+    padding: 14px 22px;
 
     background: var(--amber);
-    color: var(--deep-claret);
+    color: var(--dark-claret);
 
     text-decoration: none;
     font-size: 12px;
@@ -159,7 +132,6 @@ nav a:hover {
 
 .button:hover {
     background: var(--white);
-    color: var(--deep-claret);
 }
 
 
@@ -168,25 +140,24 @@ nav a:hover {
 ========================= */
 
 section {
-    padding: 70px 5%;
+    padding: 65px 5%;
 }
 
 .heading {
-    border-bottom: 2px solid var(--amber);
+    border-bottom: 1px solid rgba(217, 154, 0, 0.6);
     padding-bottom: 15px;
     margin-bottom: 30px;
 }
 
 .heading h2 {
     color: var(--amber);
-    font-size: 32px;
+    font-size: 30px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 
 /* =========================
-   REPORTS
+   PHOTO REPORTS
 ========================= */
 
 .reports {
@@ -208,13 +179,13 @@ section {
 
     padding: 22px;
 
-    border: 1px solid rgba(242, 169, 0, 0.25);
+    border: 1px solid rgba(217, 154, 0, 0.25);
 
     transition: 0.25s;
 }
 
 .report:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     border-color: var(--amber);
 }
 
@@ -222,9 +193,7 @@ section {
     position: absolute;
     inset: 0;
 
-    background:
-        linear-gradient(to top, #250008, transparent 70%),
-        linear-gradient(135deg, #850020, #4d0012);
+    background: var(--dark-claret);
 }
 
 .report-content {
@@ -234,25 +203,39 @@ section {
 
 .report-content small {
     color: var(--amber);
-
     font-size: 11px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .report-content h3 {
     color: var(--white);
-
     font-size: 23px;
     margin-top: 7px;
 }
 
 .report-content p {
-    color: var(--light-white);
-
+    color: var(--grey);
     font-size: 12px;
     margin-top: 6px;
+}
+
+
+/* =========================
+   DONATE
+========================= */
+
+.donate {
+    background: var(--dark-claret);
+
+    border-top: 1px solid rgba(217, 154, 0, 0.5);
+    border-bottom: 1px solid rgba(217, 154, 0, 0.5);
+}
+
+.donate p {
+    color: var(--white);
+    max-width: 600px;
+    line-height: 1.7;
 }
 
 
@@ -271,36 +254,17 @@ section {
 
 
 /* =========================
-   DONATE
-========================= */
-
-.donate {
-    background: var(--deep-claret);
-
-    border-top: 1px solid var(--amber);
-    border-bottom: 1px solid var(--amber);
-}
-
-.donate p {
-    color: var(--white);
-
-    max-width: 600px;
-    line-height: 1.7;
-}
-
-
-/* =========================
    FOOTER
 ========================= */
 
 footer {
     padding: 30px 5%;
 
-    background: var(--deep-claret);
+    background: var(--claret);
 
-    border-top: 2px solid var(--amber);
+    border-top: 1px solid rgba(217, 154, 0, 0.5);
 
-    color: var(--white);
+    color: var(--grey);
 
     font-size: 11px;
 
@@ -321,12 +285,12 @@ footer div:first-child {
 @media (max-width: 700px) {
 
     header {
-        align-items: flex-start;
+        align-items: center;
         gap: 15px;
     }
 
-    .logo {
-        font-size: 24px;
+    .logo img {
+        height: 48px;
     }
 
     nav {
@@ -340,17 +304,11 @@ footer div:first-child {
     }
 
     .hero {
-        min-height: 65vh;
-        padding-bottom: 60px;
-    }
-
-    .hero h1 {
-        font-size: 70px;
-        letter-spacing: 1px;
+        min-height: 35vh;
     }
 
     .hero p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .reports {
@@ -362,7 +320,7 @@ footer div:first-child {
     }
 
     .heading h2 {
-        font-size: 27px;
+        font-size: 26px;
     }
 
     footer {
@@ -389,7 +347,7 @@ footer div:first-child {
 <header>
 
     <div class="logo">
-        BLOCK E 19
+        <img src="image.png" alt="Block E 19 Logo">
     </div>
 
     <nav>
@@ -409,14 +367,6 @@ footer div:first-child {
 
     <div class="hero-text">
 
-        <div class="kicker">
-            Motherwell · Scotland
-        </div>
-
-        <h1>
-            BLOCK E<br>19
-        </h1>
-
         <p>
             Matchday photography from the stands.
             A collection of photos and memories from Block E.
@@ -432,7 +382,7 @@ footer div:first-child {
 
 
 <!-- =========================
-     REPORTS
+     PHOTO REPORTS
 ========================= -->
 
 <section id="reports">
