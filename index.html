@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,13 +9,30 @@
 
 <style>
 
-:root {
-    --claret: #4a0012;
-    --dark-claret: #3a000e;
-    --amber: #d99a00;
-    --white: #ffffff;
-    --grey: #d0d0d0;
+/* ========================================
+   COLOURS & FONT
+======================================== */
+
+@font-face {
+    font-family: "La Oriental";
+    src: url("LaOriental-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
+
+:root {
+    --claret: #4b0013;
+    --dark-claret: #39000e;
+    --deep-claret: #2b0009;
+    --amber: #d49a00;
+    --white: #ffffff;
+    --grey: #bdbdbd;
+}
+
+
+/* ========================================
+   BASIC
+======================================== */
 
 * {
     box-sizing: border-box;
@@ -33,26 +51,22 @@ body {
 }
 
 
-/* =========================
+/* ========================================
    HEADER
-========================= */
+======================================== */
 
 header {
-    padding: 18px 5%;
-    background: var(--claret);
-    border-bottom: 1px solid rgba(217, 154, 0, 0.5);
+    height: 82px;
+
+    padding: 10px 5%;
+
+    background: var(--dark-claret);
+
+    border-bottom: 1px solid rgba(255,255,255,0.18);
 
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-}
-
-
-/* BLOCK E LOGO */
-
-.logo {
-    display: flex;
-    align-items: center;
 }
 
 .logo img {
@@ -61,20 +75,20 @@ header {
     display: block;
 }
 
-
-/* NAVIGATION */
-
 nav {
     display: flex;
-    gap: 22px;
+    gap: 25px;
 }
 
 nav a {
     color: var(--white);
     text-decoration: none;
-    font-size: 12px;
+
+    font-size: 11px;
     font-weight: bold;
+
     text-transform: uppercase;
+
     transition: 0.2s;
 }
 
@@ -83,210 +97,380 @@ nav a:hover {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* ========================================
+   MAIN TITLE
+======================================== */
 
-.hero {
-    min-height: 35vh;
-    padding: 8% 5%;
+.intro {
+    padding: 65px 5% 45px;
+    max-width: 1100px;
+}
+
+.intro h1 {
+    font-family: "La Oriental", sans-serif;
+
+    color: var(--amber);
+
+    font-size: clamp(55px, 9vw, 105px);
+
+    line-height: 0.9;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.intro p {
+    margin-top: 22px;
+
+    color: var(--white);
+
+    max-width: 600px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   SECTION TITLES
+======================================== */
+
+.section {
+    padding: 20px 5% 70px;
+}
+
+.section-header {
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+
+    padding-bottom: 12px;
+
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-family: "La Oriental", sans-serif;
+
+    color: var(--amber);
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    text-transform: uppercase;
+}
+
+.section-header span {
+    color: var(--grey);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   FEATURE REPORT
+======================================== */
+
+.feature {
+    background: var(--deep-claret);
+}
+
+.feature-photo {
+    min-height: 520px;
+
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(43,0,9,0.9),
+            rgba(43,0,9,0.05) 60%
+        ),
+        url("image.png");
+
+    background-size: cover;
+
+    background-position: center;
 
     display: flex;
-    align-items: center;
 
-    background: var(--claret);
+    align-items: flex-end;
+
+    padding: 30px;
 }
 
-.hero-text {
-    max-width: 650px;
-}
+.feature-info h3 {
+    font-family: "La Oriental", sans-serif;
 
-.hero p {
     color: var(--white);
-    max-width: 550px;
-    line-height: 1.7;
-    font-size: 18px;
+
+    font-size: clamp(35px, 5vw, 65px);
+
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+.feature-info p {
+    margin-top: 10px;
+
+    color: var(--grey);
+
+    font-size: 12px;
 }
 
 
-/* =========================
-   BUTTON
-========================= */
+/* ========================================
+   PHOTO REPORT GRID
+======================================== */
 
-.button {
-    display: inline-block;
+.reports {
+    display: grid;
 
-    margin-top: 25px;
-    padding: 14px 22px;
+    grid-template-columns: repeat(3, 1fr);
 
-    background: var(--amber);
-    color: var(--dark-claret);
+    gap: 18px;
+}
+
+.report {
+    display: block;
+
+    background: var(--dark-claret);
+
+    color: var(--white);
 
     text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
+
+    border-bottom: 2px solid transparent;
 
     transition: 0.2s;
 }
 
-.button:hover {
-    background: var(--white);
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-    padding: 65px 5%;
-}
-
-.heading {
-    border-bottom: 1px solid rgba(217, 154, 0, 0.6);
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-}
-
-.heading h2 {
-    color: var(--amber);
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-
-/* =========================
-   PHOTO REPORTS
-========================= */
-
-.reports {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}
-
-.report {
-    min-height: 320px;
-
-    background: var(--dark-claret);
-
-    position: relative;
-    overflow: hidden;
-
-    display: flex;
-    align-items: flex-end;
-
-    padding: 22px;
-
-    border: 1px solid rgba(217, 154, 0, 0.25);
-
-    transition: 0.25s;
-}
-
 .report:hover {
-    transform: translateY(-4px);
-    border-color: var(--amber);
+    border-bottom-color: var(--amber);
 }
 
-.report-bg {
-    position: absolute;
-    inset: 0;
+.report-image {
+    height: 270px;
 
-    background: var(--dark-claret);
+    background: var(--deep-claret);
+
+    overflow: hidden;
 }
 
-.report-content {
-    position: relative;
-    z-index: 2;
+.report-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.3s;
 }
 
-.report-content small {
+.report:hover .report-image img {
+    transform: scale(1.025);
+}
+
+.report-info {
+    padding: 17px;
+}
+
+.report-info small {
     color: var(--amber);
-    font-size: 11px;
+
+    font-size: 10px;
+
     font-weight: bold;
+
     text-transform: uppercase;
 }
 
-.report-content h3 {
-    color: var(--white);
-    font-size: 23px;
+.report-info h3 {
     margin-top: 7px;
+
+    font-size: 20px;
+
+    font-weight: bold;
 }
 
-.report-content p {
+.report-info p {
+    margin-top: 5px;
+
     color: var(--grey);
-    font-size: 12px;
-    margin-top: 6px;
+
+    font-size: 11px;
 }
 
 
-/* =========================
-   DONATE
-========================= */
+/* ========================================
+   ARCHIVE
+======================================== */
 
-.donate {
+.archive {
     background: var(--dark-claret);
 
-    border-top: 1px solid rgba(217, 154, 0, 0.5);
-    border-bottom: 1px solid rgba(217, 154, 0, 0.5);
+    padding: 65px 5%;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-.donate p {
+.archive-list {
+    max-width: 900px;
+}
+
+.season {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
     color: var(--white);
-    max-width: 600px;
-    line-height: 1.7;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.season:hover {
+    color: var(--amber);
+
+    padding-left: 8px;
+}
+
+.season h3 {
+    font-size: 18px;
+}
+
+.season span {
+    color: var(--grey);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
 }
 
 
-/* =========================
+/* ========================================
    ABOUT
-========================= */
+======================================== */
 
 .about {
-    max-width: 700px;
+    max-width: 850px;
+
+    padding: 65px 5%;
 }
 
 .about p {
     color: var(--white);
-    line-height: 1.7;
+
+    font-size: 15px;
+
+    line-height: 1.8;
 }
 
 
-/* =========================
+/* ========================================
+   DONATE
+======================================== */
+
+.donate {
+    background: var(--deep-claret);
+
+    padding: 60px 5%;
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.donate p {
+    max-width: 600px;
+
+    color: var(--grey);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+.donate-button {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    padding: 13px 22px;
+
+    background: var(--amber);
+
+    color: var(--deep-claret);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.donate-button:hover {
+    background: var(--white);
+}
+
+
+/* ========================================
    FOOTER
-========================= */
+======================================== */
 
 footer {
-    padding: 30px 5%;
+    padding: 25px 5%;
 
-    background: var(--claret);
+    background: var(--deep-claret);
 
-    border-top: 1px solid rgba(217, 154, 0, 0.5);
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    display: flex;
+
+    justify-content: space-between;
 
     color: var(--grey);
 
     font-size: 11px;
-
-    display: flex;
-    justify-content: space-between;
 }
 
-footer div:first-child {
+footer strong {
     color: var(--amber);
-    font-weight: bold;
 }
 
 
-/* =========================
-   PHONE
-========================= */
+/* ========================================
+   MOBILE
+======================================== */
 
 @media (max-width: 700px) {
 
     header {
-        align-items: center;
-        gap: 15px;
+        height: auto;
+
+        min-height: 72px;
+
+        padding: 10px 5%;
     }
 
     .logo img {
@@ -294,33 +478,57 @@ footer div:first-child {
     }
 
     nav {
-        gap: 10px;
+        gap: 11px;
+
         flex-wrap: wrap;
+
         justify-content: flex-end;
     }
 
     nav a {
-        font-size: 10px;
+        font-size: 9px;
     }
 
-    .hero {
-        min-height: 35vh;
+    .intro {
+        padding-top: 50px;
     }
 
-    .hero p {
-        font-size: 16px;
+    .intro h1 {
+        font-size: 58px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .feature-photo {
+        min-height: 360px;
+
+        padding: 20px;
+    }
+
+    .feature-info h3 {
+        font-size: 38px;
     }
 
     .reports {
         grid-template-columns: 1fr;
     }
 
-    .report {
-        min-height: 270px;
+    .report-image {
+        height: 300px;
     }
 
-    .heading h2 {
-        font-size: 26px;
+    .section-header h2 {
+        font-size: 27px;
+    }
+
+    .section-header span {
+        display: none;
+    }
+
+    .season h3 {
+        font-size: 15px;
     }
 
     footer {
@@ -334,73 +542,88 @@ footer div:first-child {
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- ========================================
      HEADER
-========================= -->
+======================================== -->
 
 <header>
 
-    <div class="logo">
-        <img src="image.png" alt="Block E 19 Logo">
-    </div>
+    <a href="#" class="logo">
+        <img src="image.png" alt="Block E 19">
+    </a>
 
     <nav>
-        <a href="#reports">Reports</a>
-        <a href="#donate">Donate</a>
-        <a href="#about">About</a>
+
+        <a href="#reports">
+            Photos
+        </a>
+
+        <a href="#archive">
+            Archive
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#donate">
+            Donate
+        </a>
+
     </nav>
 
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- ========================================
+     INTRO
+======================================== -->
 
-<div class="hero">
+<section class="intro">
 
-    <div class="hero-text">
+    <h1>
+        BLOCK E 19
+    </h1>
 
-        <p>
-            Matchday photography from the stands.
-            A collection of photos and memories from Block E.
-        </p>
+    <p>
+        Matchday photography, displays and memories
+        from the stands at Fir Park.
+    </p>
 
-        <a class="button" href="#reports">
-            Photo Reports
-        </a>
+</section>
+
+
+<!-- ========================================
+     LATEST REPORT
+======================================== -->
+
+<section class="section" id="reports">
+
+    <div class="section-header">
+
+        <h2>
+            Latest
+        </h2>
+
+        <span>
+            Photo Report
+        </span>
 
     </div>
 
-</div>
 
+    <div class="feature">
 
-<!-- =========================
-     PHOTO REPORTS
-========================= -->
+        <div class="feature-photo">
 
-<section id="reports">
-
-    <div class="heading">
-        <h2>Photo Reports</h2>
-    </div>
-
-    <div class="reports">
-
-
-        <div class="report">
-
-            <div class="report-bg"></div>
-
-            <div class="report-content">
-
-                <small>Latest Report</small>
+            <div class="feature-info">
 
                 <h3>
                     Motherwell vs Hearts
@@ -414,47 +637,127 @@ footer div:first-child {
 
         </div>
 
+    </div>
 
-        <div class="report">
+</section>
 
-            <div class="report-bg"></div>
 
-            <div class="report-content">
+<!-- ========================================
+     PHOTO REPORTS
+======================================== -->
 
-                <small>Photo Report</small>
+<section class="section">
+
+    <div class="section-header">
+
+        <h2>
+            Photo Reports
+        </h2>
+
+        <span>
+            2026 / 27
+        </span>
+
+    </div>
+
+
+    <div class="reports">
+
+
+        <!-- REPORT 1 -->
+
+        <a href="#" class="report">
+
+            <div class="report-image">
+
+                <img
+                    src="image.png"
+                    alt="Motherwell vs Hearts"
+                >
+
+            </div>
+
+            <div class="report-info">
+
+                <small>
+                    09 August 2026
+                </small>
+
+                <h3>
+                    Motherwell vs Hearts
+                </h3>
+
+                <p>
+                    Fir Park
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- REPORT 2 -->
+
+        <a href="#" class="report">
+
+            <div class="report-image">
+
+                <img
+                    src="image.png"
+                    alt="Motherwell vs Celtic"
+                >
+
+            </div>
+
+            <div class="report-info">
+
+                <small>
+                    02 August 2026
+                </small>
 
                 <h3>
                     Motherwell vs Celtic
                 </h3>
 
                 <p>
-                    Fir Park · 2 August 2026
+                    Fir Park
                 </p>
 
             </div>
 
-        </div>
+        </a>
 
 
-        <div class="report">
+        <!-- REPORT 3 -->
 
-            <div class="report-bg"></div>
+        <a href="#" class="report">
 
-            <div class="report-content">
+            <div class="report-image">
 
-                <small>Photo Report</small>
+                <img
+                    src="image.png"
+                    alt="Motherwell vs Hibernian"
+                >
+
+            </div>
+
+            <div class="report-info">
+
+                <small>
+                    26 July 2026
+                </small>
 
                 <h3>
                     Motherwell vs Hibernian
                 </h3>
 
                 <p>
-                    Fir Park · 26 July 2026
+                    Fir Park
                 </p>
 
             </div>
 
-        </div>
+        </a>
 
 
     </div>
@@ -462,61 +765,148 @@ footer div:first-child {
 </section>
 
 
-<!-- =========================
+<!-- ========================================
+     ARCHIVE
+======================================== -->
+
+<section class="archive" id="archive">
+
+    <div class="section-header">
+
+        <h2>
+            Archive
+        </h2>
+
+        <span>
+            Seasons
+        </span>
+
+    </div>
+
+
+    <div class="archive-list">
+
+
+        <a href="#" class="season">
+
+            <h3>
+                2026 / 27
+            </h3>
+
+            <span>
+                View Season →
+            </span>
+
+        </a>
+
+
+        <a href="#" class="season">
+
+            <h3>
+                2025 / 26
+            </h3>
+
+            <span>
+                View Season →
+            </span>
+
+        </a>
+
+
+        <a href="#" class="season">
+
+            <h3>
+                2024 / 25
+            </h3>
+
+            <span>
+                View Season →
+            </span>
+
+        </a>
+
+
+        <a href="#" class="season">
+
+            <h3>
+                2023 / 24
+            </h3>
+
+            <span>
+                View Season →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     ABOUT
+======================================== -->
+
+<section class="about" id="about">
+
+    <div class="section-header">
+
+        <h2>
+            About Block E
+        </h2>
+
+    </div>
+
+
+    <p>
+        Block E is a supporters' group based around
+        Motherwell Football Club.
+
+        This website is an archive of matchday
+        photography, displays and memories from
+        the stands.
+    </p>
+
+</section>
+
+
+<!-- ========================================
      DONATE
-========================= -->
+======================================== -->
 
 <section class="donate" id="donate">
 
-    <div class="heading">
-        <h2>Donate</h2>
+    <div class="section-header">
+
+        <h2>
+            Support Block E
+        </h2>
+
     </div>
 
+
     <p>
-        Support the work behind Block E. Donations help towards
-        displays, flags, materials and future projects.
+        Donations help support future displays,
+        flags, materials and projects.
     </p>
 
-    <a class="button" href="#">
+
+    <a href="#" class="donate-button">
         Donate
     </a>
 
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section id="about">
-
-    <div class="heading">
-        <h2>About</h2>
-    </div>
-
-    <div class="about">
-
-        <p>
-            Block E is a supporters' group based around
-            Motherwell Football Club.
-
-            This website is a collection of matchday
-            photography from the stands.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
+<!-- ========================================
      FOOTER
-========================= -->
+======================================== -->
 
 <footer>
 
     <div>
-        BLOCK E 19
+        <strong>BLOCK E 19</strong>
     </div>
 
     <div>
