@@ -5,12 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Block E 19</title>
+<title>BLOCK E 19</title>
 
 <style>
 
 /* ========================================
-   COLOURS & FONT
+   FONT & COLOURS
 ======================================== */
 
 @font-face {
@@ -56,7 +56,7 @@ body {
 ======================================== */
 
 header {
-    height: 82px;
+    min-height: 82px;
 
     padding: 10px 5%;
 
@@ -69,11 +69,37 @@ header {
     justify-content: space-between;
 }
 
+
+/* LOGO + NAME */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    text-decoration: none;
+}
+
 .logo img {
     height: 58px;
     width: auto;
     display: block;
 }
+
+.brand-name {
+    font-family: "La Oriental", sans-serif;
+
+    color: var(--amber);
+
+    font-size: 28px;
+
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+
+/* NAVIGATION */
 
 nav {
     display: flex;
@@ -82,9 +108,11 @@ nav {
 
 nav a {
     color: var(--white);
+
     text-decoration: none;
 
     font-size: 11px;
+
     font-weight: bold;
 
     text-transform: uppercase;
@@ -98,40 +126,25 @@ nav a:hover {
 
 
 /* ========================================
-   MAIN TITLE
+   INTRO
 ======================================== */
 
 .intro {
     padding: 65px 5% 45px;
-    max-width: 1100px;
-}
 
-.intro h1 {
-    font-family: "La Oriental", sans-serif;
-
-    color: var(--amber);
-
-    font-size: clamp(55px, 9vw, 105px);
-
-    line-height: 0.9;
-
-    font-weight: normal;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
+    max-width: 1000px;
 }
 
 .intro p {
-    margin-top: 22px;
-
     color: var(--white);
 
     max-width: 600px;
 
-    font-size: 15px;
+    font-size: 16px;
 
     line-height: 1.7;
+
+    text-transform: uppercase;
 }
 
 
@@ -218,6 +231,8 @@ nav a:hover {
     font-weight: normal;
 
     line-height: 1;
+
+    text-transform: uppercase;
 }
 
 .feature-info p {
@@ -226,11 +241,13 @@ nav a:hover {
     color: var(--grey);
 
     font-size: 12px;
+
+    text-transform: uppercase;
 }
 
 
 /* ========================================
-   PHOTO REPORT GRID
+   PHOTO REPORTS
 ======================================== */
 
 .reports {
@@ -302,6 +319,8 @@ nav a:hover {
     font-size: 20px;
 
     font-weight: bold;
+
+    text-transform: uppercase;
 }
 
 .report-info p {
@@ -310,14 +329,16 @@ nav a:hover {
     color: var(--grey);
 
     font-size: 11px;
+
+    text-transform: uppercase;
 }
 
 
 /* ========================================
-   ARCHIVE
+   END OF SEASON VIDEOS
 ======================================== */
 
-.archive {
+.videos {
     background: var(--dark-claret);
 
     padding: 65px 5%;
@@ -327,39 +348,75 @@ nav a:hover {
     border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-.archive-list {
-    max-width: 900px;
+.video-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
 }
 
-.season {
-    display: flex;
+.video {
+    background: var(--deep-claret);
 
-    align-items: center;
-
-    justify-content: space-between;
-
-    padding: 20px 0;
-
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    text-decoration: none;
 
     color: var(--white);
 
-    text-decoration: none;
+    border-bottom: 2px solid transparent;
 
     transition: 0.2s;
 }
 
-.season:hover {
+.video:hover {
+    border-bottom-color: var(--amber);
+}
+
+.video-placeholder {
+    height: 280px;
+
+    background: #1d0007;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
     color: var(--amber);
 
-    padding-left: 8px;
+    font-family: "La Oriental", sans-serif;
+
+    font-size: 30px;
+
+    text-transform: uppercase;
 }
 
-.season h3 {
-    font-size: 18px;
+.video-info {
+    padding: 18px;
 }
 
-.season span {
+.video-info small {
+    color: var(--amber);
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.video-info h3 {
+    margin-top: 7px;
+
+    font-size: 20px;
+
+    text-transform: uppercase;
+}
+
+.video-info p {
+    margin-top: 5px;
+
     color: var(--grey);
 
     font-size: 11px;
@@ -384,6 +441,8 @@ nav a:hover {
     font-size: 15px;
 
     line-height: 1.8;
+
+    text-transform: uppercase;
 }
 
 
@@ -407,6 +466,8 @@ nav a:hover {
     line-height: 1.7;
 
     font-size: 14px;
+
+    text-transform: uppercase;
 }
 
 .donate-button {
@@ -452,6 +513,8 @@ footer {
     color: var(--grey);
 
     font-size: 11px;
+
+    text-transform: uppercase;
 }
 
 footer strong {
@@ -466,15 +529,21 @@ footer strong {
 @media (max-width: 700px) {
 
     header {
-        height: auto;
-
         min-height: 72px;
 
         padding: 10px 5%;
     }
 
     .logo img {
-        height: 48px;
+        height: 46px;
+    }
+
+    .brand {
+        gap: 9px;
+    }
+
+    .brand-name {
+        font-size: 21px;
     }
 
     nav {
@@ -491,10 +560,6 @@ footer strong {
 
     .intro {
         padding-top: 50px;
-    }
-
-    .intro h1 {
-        font-size: 58px;
     }
 
     .intro p {
@@ -527,8 +592,12 @@ footer strong {
         display: none;
     }
 
-    .season h3 {
-        font-size: 15px;
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-placeholder {
+        height: 230px;
     }
 
     footer {
@@ -555,26 +624,35 @@ footer strong {
 
 <header>
 
-    <a href="#" class="logo">
-        <img src="image.png" alt="Block E 19">
+    <a href="#" class="brand">
+
+        <div class="logo">
+            <img src="image.png" alt="BLOCK E 19">
+        </div>
+
+        <div class="brand-name">
+            BLOCK E 19
+        </div>
+
     </a>
+
 
     <nav>
 
         <a href="#reports">
-            Photos
+            PHOTOS
         </a>
 
-        <a href="#archive">
-            Archive
+        <a href="#videos">
+            VIDEOS
         </a>
 
         <a href="#about">
-            About
+            ABOUT
         </a>
 
         <a href="#donate">
-            Donate
+            DONATE
         </a>
 
     </nav>
@@ -588,13 +666,9 @@ footer strong {
 
 <section class="intro">
 
-    <h1>
-        BLOCK E 19
-    </h1>
-
     <p>
-        Matchday photography, displays and memories
-        from the stands at Fir Park.
+        MATCHDAY PHOTOGRAPHY, DISPLAYS AND MEMORIES
+        FROM THE STANDS AT FIR PARK.
     </p>
 
 </section>
@@ -609,11 +683,11 @@ footer strong {
     <div class="section-header">
 
         <h2>
-            Latest
+            LATEST
         </h2>
 
         <span>
-            Photo Report
+            PHOTO REPORT
         </span>
 
     </div>
@@ -626,11 +700,11 @@ footer strong {
             <div class="feature-info">
 
                 <h3>
-                    Motherwell vs Hearts
+                    MOTHERWELL VS HEARTS
                 </h3>
 
                 <p>
-                    Fir Park · 9 August 2026
+                    FIR PARK · 9 AUGUST 2026
                 </p>
 
             </div>
@@ -651,7 +725,7 @@ footer strong {
     <div class="section-header">
 
         <h2>
-            Photo Reports
+            PHOTO REPORTS
         </h2>
 
         <span>
@@ -664,15 +738,13 @@ footer strong {
     <div class="reports">
 
 
-        <!-- REPORT 1 -->
-
         <a href="#" class="report">
 
             <div class="report-image">
 
                 <img
                     src="image.png"
-                    alt="Motherwell vs Hearts"
+                    alt="MOTHERWELL VS HEARTS"
                 >
 
             </div>
@@ -680,15 +752,15 @@ footer strong {
             <div class="report-info">
 
                 <small>
-                    09 August 2026
+                    09 AUGUST 2026
                 </small>
 
                 <h3>
-                    Motherwell vs Hearts
+                    MOTHERWELL VS HEARTS
                 </h3>
 
                 <p>
-                    Fir Park
+                    FIR PARK
                 </p>
 
             </div>
@@ -696,15 +768,13 @@ footer strong {
         </a>
 
 
-        <!-- REPORT 2 -->
-
         <a href="#" class="report">
 
             <div class="report-image">
 
                 <img
                     src="image.png"
-                    alt="Motherwell vs Celtic"
+                    alt="MOTHERWELL VS CELTIC"
                 >
 
             </div>
@@ -712,15 +782,15 @@ footer strong {
             <div class="report-info">
 
                 <small>
-                    02 August 2026
+                    02 AUGUST 2026
                 </small>
 
                 <h3>
-                    Motherwell vs Celtic
+                    MOTHERWELL VS CELTIC
                 </h3>
 
                 <p>
-                    Fir Park
+                    FIR PARK
                 </p>
 
             </div>
@@ -728,15 +798,13 @@ footer strong {
         </a>
 
 
-        <!-- REPORT 3 -->
-
         <a href="#" class="report">
 
             <div class="report-image">
 
                 <img
                     src="image.png"
-                    alt="Motherwell vs Hibernian"
+                    alt="MOTHERWELL VS HIBERNIAN"
                 >
 
             </div>
@@ -744,15 +812,15 @@ footer strong {
             <div class="report-info">
 
                 <small>
-                    26 July 2026
+                    26 JULY 2026
                 </small>
 
                 <h3>
-                    Motherwell vs Hibernian
+                    MOTHERWELL VS HIBERNIAN
                 </h3>
 
                 <p>
-                    Fir Park
+                    FIR PARK
                 </p>
 
             </div>
@@ -766,75 +834,85 @@ footer strong {
 
 
 <!-- ========================================
-     ARCHIVE
+     END OF SEASON VIDEOS
 ======================================== -->
 
-<section class="archive" id="archive">
+<section class="videos" id="videos">
 
     <div class="section-header">
 
         <h2>
-            Archive
+            END OF SEASON VIDEOS
         </h2>
 
         <span>
-            Seasons
+            YOUTUBE
         </span>
 
     </div>
 
 
-    <div class="archive-list">
+    <div class="video-grid">
 
 
-        <a href="#" class="season">
+        <!-- VIDEO 1 -->
 
-            <h3>
-                2026 / 27
-            </h3>
+        <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            class="video"
+        >
 
-            <span>
-                View Season →
-            </span>
+            <div class="video-placeholder">
+                WATCH
+            </div>
 
-        </a>
+            <div class="video-info">
 
+                <small>
+                    2025 / 26
+                </small>
 
-        <a href="#" class="season">
+                <h3>
+                    END OF SEASON VIDEO
+                </h3>
 
-            <h3>
-                2025 / 26
-            </h3>
+                <p>
+                    WATCH ON YOUTUBE →
+                </p>
 
-            <span>
-                View Season →
-            </span>
-
-        </a>
-
-
-        <a href="#" class="season">
-
-            <h3>
-                2024 / 25
-            </h3>
-
-            <span>
-                View Season →
-            </span>
+            </div>
 
         </a>
 
 
-        <a href="#" class="season">
+        <!-- VIDEO 2 -->
 
-            <h3>
-                2023 / 24
-            </h3>
+        <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            class="video"
+        >
 
-            <span>
-                View Season →
-            </span>
+            <div class="video-placeholder">
+                WATCH
+            </div>
+
+            <div class="video-info">
+
+                <small>
+                    2024 / 25
+                </small>
+
+                <h3>
+                    END OF SEASON VIDEO
+                </h3>
+
+                <p>
+                    WATCH ON YOUTUBE →
+                </p>
+
+            </div>
 
         </a>
 
@@ -853,19 +931,19 @@ footer strong {
     <div class="section-header">
 
         <h2>
-            About Block E
+            ABOUT BLOCK E
         </h2>
 
     </div>
 
 
     <p>
-        Block E is a supporters' group based around
-        Motherwell Football Club.
+        BLOCK E IS A SUPPORTERS' GROUP BASED AROUND
+        MOTHERWELL FOOTBALL CLUB.
 
-        This website is an archive of matchday
-        photography, displays and memories from
-        the stands.
+        THIS WEBSITE IS AN ARCHIVE OF MATCHDAY
+        PHOTOGRAPHY, DISPLAYS AND MEMORIES FROM
+        THE STANDS.
     </p>
 
 </section>
@@ -880,20 +958,20 @@ footer strong {
     <div class="section-header">
 
         <h2>
-            Support Block E
+            SUPPORT BLOCK E
         </h2>
 
     </div>
 
 
     <p>
-        Donations help support future displays,
-        flags, materials and projects.
+        DONATIONS HELP SUPPORT FUTURE DISPLAYS,
+        FLAGS, MATERIALS AND PROJECTS.
     </p>
 
 
     <a href="#" class="donate-button">
-        Donate
+        DONATE
     </a>
 
 </section>
@@ -910,7 +988,7 @@ footer strong {
     </div>
 
     <div>
-        Motherwell · Scotland
+        MOTHERWELL · SCOTLAND
     </div>
 
 </footer>
